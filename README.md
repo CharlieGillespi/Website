@@ -4,70 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Streetwear Clothing</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; }
-    header { background: #000; color: #fff; padding: 20px; text-align: center; }
-    nav { background: #333; display: flex; justify-content: center; padding: 10px; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-    .container { width: 90%; margin: auto; padding: 20px 0; }
-    .products { display: flex; flex-wrap: wrap; justify-content: center; }
-    .product { border: 1px solid #ccc; margin: 10px; padding: 10px; width: 250px; text-align: center; }
-    .product img { width: 100%; }
-    .venmo-btn {
-      background: #3D95CE; color: #fff; padding: 10px;
-      text-decoration: none; display: inline-block; margin-top: 10px;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
     }
-    footer { background: #000; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    table, th, td { border: 1px solid #ccc; }
-    th, td { padding: 10px; text-align: center; }
+    header {
+      background: linear-gradient(45deg, #000, #444);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3D95CE;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+    .product {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .product h3 {
+      margin: 15px 0;
+    }
+    .product p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    .venmo-btn {
+      background: #3D95CE;
+      color: #fff;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 3px;
+      transition: background 0.3s;
+    }
+    .venmo-btn:hover {
+      background: #2a7a9e;
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background: #3D95CE;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Streetwear Clothing</h1>
-    <p>Only Accepting Venmo Payments</p>
+    <p>Exclusively Venmo Payments</p>
   </header>
-
   <nav>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <section id="home" class="container">
     <h2>Welcome</h2>
-    <p>Discover the latest streetwear styles. All payments are done via Venmo.</p>
+    <p>Discover our latest streetwear styles. All transactions are via Venmo.</p>
   </section>
-
   <section id="products" class="container">
     <h2>Products</h2>
     <div class="products">
-      <!-- Product 1 -->
       <div class="product">
         <img src="shirt.jpg" alt="Cool Shirt">
         <h3>Cool Shirt</h3>
         <p>$29.99</p>
         <a class="venmo-btn" href="https://venmo.com/?txn=pay&recipients=YourVenmoUsername&amount=29.99&note=Cool+Shirt">Buy with Venmo</a>
       </div>
-      <!-- Product 2 -->
       <div class="product">
         <img src="hoodie.jpg" alt="Urban Hoodie">
         <h3>Urban Hoodie</h3>
         <p>$49.99</p>
         <a class="venmo-btn" href="https://venmo.com/?txn=pay&recipients=YourVenmoUsername&amount=49.99&note=Urban+Hoodie">Buy with Venmo</a>
       </div>
-      <!-- Product 3 -->
       <div class="product">
         <img src="cap.jpg" alt="Stylish Cap">
         <h3>Stylish Cap</h3>
         <p>$19.99</p>
         <a class="venmo-btn" href="https://venmo.com/?txn=pay&recipients=YourVenmoUsername&amount=19.99&note=Stylish+Cap">Buy with Venmo</a>
       </div>
-      <!-- Add more products as needed -->
     </div>
-
     <h3>Product Summary</h3>
     <table>
       <tr>
@@ -92,12 +163,15 @@
       </tr>
     </table>
   </section>
-
   <section id="contact" class="container">
     <h2>Contact</h2>
     <p>Email us at <a href="mailto:info@streetwear.com">info@streetwear.com</a></p>
   </section>
-
+  <footer>
+    <p>&copy; 2025 Streetwear Clothing</p>
+  </footer>
+</body>
+</html>
   <footer>
     <p>&copy; 2025 Streetwear Clothing</p>
   </footer>
